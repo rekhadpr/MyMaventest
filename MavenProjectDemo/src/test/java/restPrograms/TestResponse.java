@@ -20,6 +20,10 @@ package restPrograms;
 
 	           Response response = httpRequest.get("");
 
+		       ResponseBody body = response.getBody();
+		       System.out.println("Response Body is: " + body.asString());
+	   		String contentType = response.header("Content-Type"); 
+	   		System.out.println("Content-Type value: " + contentType);
 	           // Get the status code of the request. 
 	           //If request is successful, status code will be 200
 	          int statusCode = response.getStatusCode();
